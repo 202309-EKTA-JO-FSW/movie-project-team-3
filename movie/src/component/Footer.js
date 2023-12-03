@@ -2,7 +2,7 @@
 const Footer = () => {
  return (
     <footer className="footer">
-      <p>© 2022 Movie Re:Coded</p>
+      <p>© 2023 Movie Re:Coded</p>
       <p>Project done by :  Baraa Sidair, Farah Alsoqi, and Ammar KolKo</p>
       <br></br>
       <div>
