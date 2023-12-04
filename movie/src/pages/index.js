@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import Header from '../componats/Header'
-import { global } from 'styled-jsx/css'
-
+import { Style } from 'util'
 
 export default function Home() {
   return (
@@ -9,8 +8,9 @@ export default function Home() {
     <main>
       <div>
        <Header>Header</Header>
+       
       </div>
-
+       
     </main>
   )
 }
