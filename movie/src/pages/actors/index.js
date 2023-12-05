@@ -1,39 +1,45 @@
-"use client"
-import {useEffect, useState} from 'react'
 import Link from 'next/link'
- function Actors() {
- 
-    const [ActorsList, setActorsList] = useState([])
-    const getActors = () => {fetch('https://api.themoviedb.org/3/person/popular?language=en-US&page=1', {
-      method: 'GET',
-      headers: {
-        accept: 'application/json',
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxMTMxMjc3MzY1M2NiMjk4NWQ1MzJhYjIyMzUwNjRkMyIsInN1YiI6IjY1NjRiZTI3MzY3OWExMDk3NGRhYjg4NCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.W2PaRJ944VdGzYepbksyswnu7vaRO6CProCllZ4OoPw'
-    },
-   })
-       .then(res => res.json())
-       .then(json => setActorsList(json.results))
-    }
-      
-      useEffect(() => {getActors()}, [])
+import React from 'react'
+import 'bootstrap/dist/js/bootstrap.esm';
 
-      console.log(ActorsList);
+export async function getStaticProps() {
+  const res = await fetch('https://api.themoviedb.org/3/person/popular?language=en-US&page=1', {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxOTdhZTMzZTUyM2I1N2RhZmY5OTc5NmFhMTBmNzg5YSIsInN1YiI6IjY1NjRiY2Q3MzY3OWExMDk3ODc0ZTM1YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.YpvhgHOtl4TQ6XTUXsQ6J1XfT0FDqiiZHmEQv6angK0'
+  },
+ })
+  const data = await res.json()
+  return { props: { actors: data.results } }
+}
 
-      const Actorsjsx = ActorsList.map((Actor) => {
-        return (
-          <Link  href={`/actors/${Actor.id}`} key={Actor.id} >
-          <div style={{width:"290px", padding:"5px",  borderRadius:"10px", margin:"17px", backgroundColor:"rgb(200, 209, 216)"}}>
-           <img  style={{width:"259px", height:"250px", marginLeft:"10px", marginTop:"30px"}}src={`https://image.tmdb.org/t/p/w500${Actor.profile_path}`}/>
-           <p className="text">{Actor.name}</p>
-          </div>
-          </Link>
-        )
-      })
-    return (
-      <div className="Actors-List">
-        {Actorsjsx}
-      </div>)
-}  
+function Actors({ actors }) {
+  return (
+    <div className='bg-white py-24 sm:py-32'>
+      <div className='mx-auto max-w-7xl px-6 lg:px-8'>
 
-export default Actors;
+        <h2>Actors</h2>
 
+        <ul> 
+          {actors.map((actor) => (
+            
+            <Link href={`/actors/${actor.id}`} key={actor.id} >
+              <div style={{width:"290px", padding:"5px",  borderRadius:"10px", margin:"17px", backgroundColor:"rgb(200, 209, 216)"}}>
+                <img
+                  src={`https://image.tmdb.org/t/p/original/${actor.profile_path}`}
+                  style={{width:"259px", height:"250px", marginLeft:"10px", marginTop:"30px"}}
+                  alt='Actor Picture'
+                />
+                  <p className="text">{actor.name}</p>
+              </div>
+            </Link>
+          ))}
+        </ul>
+
+      </div>
+    </div>
+  )
+}
+
+export default Actors
