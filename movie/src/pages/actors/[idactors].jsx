@@ -1,4 +1,42 @@
-import { useRouter } from 'next/router'
+
+function Actor({ idactors }) {
+  console.log(idactors)
+  
+  return( 
+     
+    <div class="card mb-3" style={{maxwidth: "540px"}}>
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src={`https://image.tmdb.org/t/p/w500/${idactors.profile_path}`} class="img-fluid rounded-start" alt="Actor Picture"/>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h1 class="card-title">{idactors.name}</h1>
+          <br></br>
+          <p class="card-text"><strong>Birthday: </strong>{idactors.birthday}</p>
+          <p class="card-text"><strong>Gender: </strong>  <GetGender gender={idactors.gender}/></p>
+          <p class="card-text"><strong>Biography: </strong> {idactors.biography}</p>
+          <p class="card-text"><strong>Popularity: </strong>{idactors.popularity}</p>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  )
+}
+
+export default Actor
+
+
+ 
+export const GetGender = ({gender}) => {
+  if (gender == 1) {
+     return "female";
+  } else {
+     return "male";
+  }
+ };
 
 export async function getStaticPaths() {
   const res = await fetch('https://api.themoviedb.org/3/person/popular?language=en-US&page=1', {
@@ -32,32 +70,3 @@ export async function getStaticProps({ params }) {
 }
 
 
-
-function Actor({ idactors }) {
-  console.log(idactors)
-  const router = useRouter()
-  
-  return( 
-  
-  <div className="mx-auto max-w-7xl w-full p-6"> 
-  <img src={`https://image.tmdb.org/t/p/w500/${idactors.profile_path}`}/>
-  <h1>{idactors.name}</h1>
-  <p>Birthday : {idactors.birthday}</p>
-  <p>Gender: <GetGender gender={idactors.gender}/></p>
-  <p>Biography: {idactors.biography}</p>
-  <p>Popularity: {idactors.popularity}</p>
-  </div>)
-}
-
-export default Actor
-
-
-
- 
-export const GetGender = ({gender}) => {
-  if (gender == 1) {
-     return "female";
-  } else {
-     return "male";
-  }
- };
