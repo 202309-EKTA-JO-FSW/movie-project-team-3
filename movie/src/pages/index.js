@@ -1,11 +1,14 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
+import Movies from './movies'
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
  return (
     <div>
-      <h1>TOP MOVIES</h1>
+      <br></br>
+      <h1 style={{marginLeft:"30px"}}>TOP MOVIES</h1>
+      <Movies/>
     </div>
  );
 }
