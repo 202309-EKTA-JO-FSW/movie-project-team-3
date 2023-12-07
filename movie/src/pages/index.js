@@ -4,7 +4,7 @@ import Movies from './movies'
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
- return (
+  return (
     <div>
       <br></br>      
       <br></br>
