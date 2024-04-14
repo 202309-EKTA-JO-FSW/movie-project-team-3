@@ -1,3 +1,9 @@
+![Movie1](https://github.com/202309-EKTA-JO-FSW/movie-project-team-3/assets/144911359/9ec93681-ea28-4a24-a4ce-b4d842cff34d)
+
+
+![Movie](https://github.com/202309-EKTA-JO-FSW/movie-project-team-3/assets/144911359/dd958da2-a9ee-4944-9a49-28ae224a9d91)
+
+
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=13048740&assignment_repo_type=AssignmentRepo)
 # Movie Project
 
@@ -56,5 +62,3 @@ In times of doubts remember these:
 - *`I've worked on 3 projects. They seemed difficult in the beginning but I still aced them. I'm awesome!`*
 - *`3 months ago, my biggest issues and worries are how to write the correct class name to change an HTML element's color. Now, I'm dealing with bigger things because I've learned so much more. My current worries and issues will be my HTML and CSS of my future.`*
 - *`I'm not alone on this team. There are 2 more people who got my back.`*
-![Movie1](https://github.com/202309-EKTA-JO-FSW/movie-project-team-3/assets/144911359/9ec93681-ea28-4a24-a4ce-b4d842cff34d)
-![Movie](https://github.com/202309-EKTA-JO-FSW/movie-project-team-3/assets/144911359/dd958da2-a9ee-4944-9a49-28ae224a9d91)
