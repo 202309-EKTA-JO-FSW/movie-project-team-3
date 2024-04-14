@@ -4,13 +4,14 @@ function Movie({ idmovies }) {
     
     return( 
        
-      <div class="card mb-3" style={{maxwidth: "540px"}}>
+      <div class="card mb-3" style={{maxwidth: "840px"}}>
       <div class="row g-0">
         <div class="col-md-4">
           <img src={`https://image.tmdb.org/t/p/w500${idmovies.poster_path}`} class="img-fluid rounded-start" alt="Actor Picture"/>
         </div>
         <div class="col-md-8">
-          <div class="card-body">
+          <div class="card-body" style={{marginTop: "7%", marginBottom: "7%"}}>
+            <br/>
             <h1 class="card-title">{idmovies.title}</h1>
             <br></br>
             <p class="card-text"><strong>Release date: </strong>{idmovies.release_date}</p>
