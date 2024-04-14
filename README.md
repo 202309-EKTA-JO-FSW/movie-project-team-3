@@ -56,3 +56,5 @@ In times of doubts remember these:
 - *`I've worked on 3 projects. They seemed difficult in the beginning but I still aced them. I'm awesome!`*
 - *`3 months ago, my biggest issues and worries are how to write the correct class name to change an HTML element's color. Now, I'm dealing with bigger things because I've learned so much more. My current worries and issues will be my HTML and CSS of my future.`*
 - *`I'm not alone on this team. There are 2 more people who got my back.`*
+![Movie1](https://github.com/202309-EKTA-JO-FSW/movie-project-team-3/assets/144911359/9ec93681-ea28-4a24-a4ce-b4d842cff34d)
+![Movie](https://github.com/202309-EKTA-JO-FSW/movie-project-team-3/assets/144911359/dd958da2-a9ee-4944-9a49-28ae224a9d91)
