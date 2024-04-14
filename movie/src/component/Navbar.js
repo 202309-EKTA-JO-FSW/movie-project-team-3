@@ -23,6 +23,7 @@ const styles = {
     padding: '10px 0',
   },
   logo: {
+    height: '2rem', // Adjust the height of the logo
     marginRight: '3rem',
   },
   ul: {
@@ -46,7 +47,7 @@ const styles = {
     borderRadius: '10px',
     outline: 'none',
     height: '2.4rem', 
-    width: '240px', 
+    width: '270px', 
   },
 };
 
@@ -67,7 +68,7 @@ const Navbar = () => {
       <div style={styles.container}>
         <div style={styles.flexContainer}>
           <Link href="/">
-            <img src="./1.jpg" className="h-8 mr-4" alt="Logo" style={styles.logo} />
+            <img src="https://www.svgrepo.com/show/85287/movie-clapper-open.svg" className="h-8 mr-4" alt="Logo" style={styles.logo} />
           </Link>
           <Link href="/" style={styles.link}>
             <span>Home</span>

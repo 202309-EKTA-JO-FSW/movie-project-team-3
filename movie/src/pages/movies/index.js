@@ -22,8 +22,8 @@ function Movies() {
     const Moviesjsx = movieList.map((movie) => {
       return (
           <Link href={`/movies/${movie.id}`} key={movie.id}>
-              <div className="card movie-card" style={{ height: "420px" }}> {/* Adjusted card height */}
-                  <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}?width=172&amp;height=172`} className="card-img-top" alt="Actor Picture" style={{ height: "330px", objectFit: "cover" }} /> {/* Adjusted image height and added object-fit */}
+              <div className="card movie-card" style={{ height: "420px" }}> 
+                  <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}?width=172&amp;height=172`} className="card-img-top" alt="Actor Picture" style={{ height: "330px", objectFit: "cover" }} /> 
                   <div className="card-body">
                       <h5>{movie.title}</h5>
                   </div>
@@ -33,17 +33,16 @@ function Movies() {
   });
   
     return (
-      <div style={{ paddingLeft: '7%', paddingRight: '7%' }}> {/* Adjusted container width */}
+      <div style={{ paddingLeft: '7%', paddingRight: '7%' }}>
       <br/>
       <br/>
       <br/>
-
-                <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4"> {/* Adjusted column layout */}
-                    {Moviesjsx}
-                </div>
-                <br></br>
-                <br></br>
-            </div>
+      <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+        {Moviesjsx}
+      </div>
+       <br></br>
+       <br></br>
+      </div>
     );
 }
 

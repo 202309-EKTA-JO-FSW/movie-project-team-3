@@ -15,30 +15,28 @@ export async function getStaticProps() {
 
 function Actors({ actors }) {
   return (
-    <div className='bg-white py-24 sm:py-32'>
-      <div className='mx-auto max-w-7xl px-6 lg:px-8'>
-        <br></br>
-        <br></br>
-        <ul class="row row-cols-1 row-cols-md-4 g-4"> 
-          {actors.map((actor) => (
+    <div style={{ paddingLeft: '7%', paddingRight: '7%' }}>
+      <br/>
+      <br/>
+      <br/>
+    <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+    {actors.map((actor) => (
             
             <Link href={`/actors/${actor.id}`} key={actor.id} >
-                <div class="card" style={{width: "18rem", display:"flex"}}>
-                  <img src={`https://image.tmdb.org/t/p/original/${actor.profile_path}`} class="card-img-top" alt="Actor Picture"/>
+                <div className="card movie-card" style={{ height: "420px" }}> 
+                  <img src={`https://image.tmdb.org/t/p/original/${actor.profile_path}?width=172&amp;height=172`} class="card-img-top" alt="Actor Picture" style={{ height: "330px", objectFit: "cover" }}/>
                   <div class="card-body">
                     <h5>{actor.name}</h5>
                   </div>
                 </div>
             </Link>
           ))}
-        </ul>
-        <br></br>
-      </div>
-    </div>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        </div>
   )
 }
 
 export default Actors
-
-
-
