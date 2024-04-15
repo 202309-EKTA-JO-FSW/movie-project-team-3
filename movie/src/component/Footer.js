@@ -1,51 +1,105 @@
-
-const teams = [
-    {
-    id:1,
-    name:"Baraa Sidair",
-    github:"https://github.com/baraab",
-    linkedin:""},
-    {
-        id:2,
-        name:"Farah Alsoqi",
-        github:"https://github.com/FarahAlsoqi",
-        linkedin:"https://jo.linkedin.com/in/farah-alsoqi0"},
-        {
-            id:3,
-            name:"Ammar KolKo",
-            github:"https://github.com/Ammar-coder87",
-            linkedin:"https://www.linkedin.com/in/ammar-kolko-39755674/"},
-]
-
+import React from "react";
 const Footer = () => {
- return (
-    <footer className="footer">
-      <p>© 2023 Movie Re:Coded</p>
-      <p>Project done by :  Baraa Sidair, Farah Alsoqi, and Ammar KolKo</p>
-      <br></br>
-      <div>
+  return (
+    <div class="container-fluid px-0" style={{ margin: 0, padding: 0 }}>
+      <footer class="text-center text-lg-start text-white" style={{ backgroundColor: "#1c2331" }}>
+        <section class="d-flex justify-content-between p-4" style={{ backgroundColor: "#6351ce" }}>
+          <div class="me-5">
+            <span>Get connected with us on social networks:</span>
+          </div>
+          <div>
+            <a href="" class="text-white me-4">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="" class="text-white me-4">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="" class="text-white me-4">
+              <i class="fab fa-google"></i>
+            </a>
+            <a href="" class="text-white me-4">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="" class="text-white me-4">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="" class="text-white me-4">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </section>
 
-        {
-            teams.map((team) =>(
-              <ul key={team.id} className="footerImage">
+        <section class="">
+          <div class="container text-center text-md-start mt-5">
+            <div class="row mt-3">
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold">Team Member</h6>
+                <hr class="mb-4 mt-0 d-inline-block mx-auto" style={{ width: "60px", backgroundColor: "#7c4dff", height: "2px" }} />
+                <p>
+                This website is the product of a group of Full stack web developers of the Re:coded Bootcamp                
+                </p>
+              </div>
 
-                <a href={`${team.linkedin}`}>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/640px-LinkedIn_logo_initials.png " alt="LinkedIn Logo" width="20" height="20" style={{margin:"5px"}}/>
-                    {team.name}
-                </a> 
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold">Farah Alsoqi</h6>
+                <hr class="mb-4 mt-0 d-inline-block mx-auto" style={{ width: "60px", backgroundColor: "#7c4dff", height: "2px" }} />
+                <p>
+                  <a href="https://www.linkedin.com/in/farah-alsoqi0/" class="text-white">
+                    LinkedIn 
+                  </a>
+                </p>
+                <p>
+                  <a href="https://www.linkedin.com/in/farah-alsoqi0/" class="text-white">
+                    GitHub 
+                  </a>
+                </p>
+                <p>
+                <a href="#!" class="text-white">FarahManna97@gmail.com</a>
+                </p>
+              </div>
 
-                <a href={`${team.github}`}>
-                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github Logo" width="25" />
-                    {team.name}
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold">Baraa Sidair</h6>
+                <hr class="mb-4 mt-0 d-inline-block mx-auto" style={{ width: "60px", backgroundColor: "#7c4dff", height: "2px" }} />
+                  <p>
+                <a href="https://github.com/baraab" class="text-white">
+                  GitHub 
                 </a>
-                
-              </ul>
-            ))
-        }
-      </div>
-      <br></br>
-    </footer>
- );
+                </p>
+                <p>
+                  <a href="#!" class="text-white">Email</a>
+                </p>
+              </div>
+
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold">Ammar KolKo</h6>
+                <hr class="mb-4 mt-0 d-inline-block mx-auto" style={{ width: "60px", backgroundColor: "#7c4dff", height: "2px" }} />
+                <p>
+                <a href="https://www.linkedin.com/in/ammar-kolko-39755674/" class="text-white">
+                    LinkedIn 
+                </a>
+                  </p>
+                  <p>
+                <a href="https://github.com/Ammar-coder87" class="text-white">
+                    GitHub 
+                </a>
+                </p>
+                <p>
+                  <a href="#!" class="text-white">Email</a>
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <div class="text-center p-3" style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}>
+          © 2023 Copyright: <a class="text-white" href="https://www.re-coded.com/">Re:Coded.com</a>
+        </div>
+        
+      </footer>
+    </div>
+  );
 };
 
 export default Footer;
