@@ -9,7 +9,7 @@ function Actor({ idactors }) {
   useEffect(() => {
     const fetchMovieCredits = async () => {
       try {
-        if (!idactors) return; // Check if idactors is undefined
+        if (!idactors) return; 
         const res = await fetch(
           `https://api.themoviedb.org/3/person/${idactors.id}/movie_credits?api_key=11312773653cb2985d532ab2235064d3`
         );
@@ -24,10 +24,10 @@ function Actor({ idactors }) {
     };
 
     fetchMovieCredits();
-  }, [idactors]); // Remove .id here
+  }, [idactors]); 
 
   if (!idactors) {
-    return <div>Loading...</div>; // Add a loading state while data is being fetched
+    return <div>Loading...</div>; 
   }
 
 
