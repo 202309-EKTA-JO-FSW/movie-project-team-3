@@ -79,6 +79,9 @@ const Navbar = () => {
           <Link href="/actors" style={styles.link}>
             <span>Actors</span>
           </Link>
+          <Link href="/about" style={styles.link}>
+            <span>About</span>
+          </Link>
           <form onSubmit={handleSearchSubmit}>
             <input
               type="text"

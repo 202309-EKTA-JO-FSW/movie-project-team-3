@@ -10,10 +10,21 @@ function Error(){
                         <div class="error-page text-center">
                             <br></br>
                             <br></br>
-                            <h1 class="display-3">Error</h1>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <h1 className="display-1">Error</h1>
                             <p class="lead">Sorry, we couldn't find the page you are looking for.</p>
                             <p>Please go back to the previous page or return to the homepage.</p>
-                            <a class="btn btn-light btn-md" href="./" role="button">Return to homepage</a>
+                            <br/>
+                            <a class="btn btn-danger btn-md" href="./" role="button">Return to HomePage</a>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
                         </div>
                     </div>
                 </div>
