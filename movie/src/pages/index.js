@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import Movies from './movies'
 const inter = Inter({ subsets: ["latin"] });
+import TopRated from '@/component/TopRated';
 
 export default function Home() {
   return (
@@ -10,8 +10,8 @@ export default function Home() {
             <br/>
             <br/>
             <br/>
-      <h1 style={{marginLeft:"7%"}}>TOP MOVIES</h1>
-      <Movies/>
+      <h1 style={{ fontWeight: 'bold', fontSize: '40px',marginLeft:"7%", fontSize: '60px' }}>TOP MOVIES</h1>
+      <TopRated/>
     </div>
  );
 }

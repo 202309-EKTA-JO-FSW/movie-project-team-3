@@ -33,14 +33,14 @@ function Actor({ idactors }) {
 
   return( 
      <div>
-    <div class="card mb-3" style={{maxwidth: "340px"}}>
+    <div class="card mb-3" >
     <div class="row g-0">
       <div class="col-md-4">
-        <img src={`https://image.tmdb.org/t/p/w500/${idactors.profile_path}`} class="img-fluid rounded-start" alt="Actor Picture"/>
+        <img src={`https://image.tmdb.org/t/p/w500/${idactors.profile_path}`} class="img-fluid rounded-start" alt="Actor Picture" style={{width:' 100%',height:' 100%'}}/>
       </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h1 class="card-title">{idactors.name}</h1>
+      <div class="col-md-8" style={{maxwidth: "340px"}}>
+        <div class="card-body" style={{width:' 100%',height:' 100%', marginTop:'8%', marginBottom:'2%'}}>
+          <h1 class="card-title" style={{ fontWeight: 'bold', fontSize: '45px' }}>{idactors.name}</h1>
           <br></br>
           <p class="card-text"><strong>Birthday: </strong>{idactors.birthday}</p>
           <p class="card-text"><strong>Gender: </strong>  <GetGender gender={idactors.gender}/></p>
@@ -50,14 +50,15 @@ function Actor({ idactors }) {
       </div>
     </div>
   </div>
-  <h3>Movie Credits:</h3>
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
+  <h3 style={{ fontWeight: 'bold', fontSize: '45px', marginLeft:'6%', marginTop:'2%' }}>Movie Credits:</h3>
+  <br/>
+      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center" }}>
         {movieCredits.map((movie) => (
           <Link href={`/movies/${movie.id}`} key={movie.id}>
-            <div className="card movie-card" style={{ flex: "0 0 25%", margin: "0 20px 20px 0", textAlign: "center" }}>
-              <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}?width=172&amp;height=172`} className="card-img-top" alt="Movie Poster" style={{ height: "200px", width: "auto" }} />
+            <div className="card movie-card" style={{ flex: "0 0 25%", margin: "0 20px 20px 0", textAlign: "center"}}>
+              <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}?width=172&amp;height=172`} className="card-img-top" alt="Movie Poster" style={{ height: "270px", width: "auto" }} />
               <div className="card-body" style={{ padding: "10px" }}>
-                <p className="card-title" style={{ height: "100px", width: "200px" }}>{movie.title}</p>
+                <p className="card-title" style={{ height: "30px", width: "200px" }}>{movie.title}</p>
               </div>
             </div>
           </Link>
