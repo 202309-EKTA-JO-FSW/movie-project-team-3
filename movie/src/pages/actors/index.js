@@ -20,23 +20,23 @@ function Actors({ actors }) {
       <br/>
       <br/>
 
-    <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+    <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4" >
     {actors.map((actor) => (
             
             <Link href={`/actors/${actor.id}`} key={actor.id} >
-                <div className="card movie-card" style={{ height: "420px" }}> 
+                <div className="card movie-card" style={{width:' 100%',height:' 100%'}}> 
                   <img src={`https://image.tmdb.org/t/p/original/${actor.profile_path}?width=172&amp;height=172`} class="card-img-top" alt="Actor Picture" style={{ height: "330px", objectFit: "cover" }}/>
                   <div class="card-body">
                     <h5>{actor.name}</h5>
                   </div>
                 </div>
             </Link>
-          ))}
-        </div>
+    ))}
+    </div>
         <br/>
         <br/>
         <br/>
-        </div>
+    </div>
   )
 }
 

@@ -37,6 +37,9 @@ function Movies() {
       <br/>
       <br/>
       <br/>
+      <br/>
+      <h1 style={{ fontWeight: 'bold', fontSize: '40px',marginLeft:"0.2%", fontSize: '60px' }}>DISCOVER MOVIES</h1>
+      <br/>
       <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
         {Moviesjsx}
       </div>
